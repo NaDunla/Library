@@ -17,8 +17,14 @@ namespace ConsoleApp1
         #endregion
 
         #region Methods
-        
-        
+        public void checkOutBook()
+        {
+
+        }
+        public void checkInBook()
+        {
+
+        }
         #endregion
 
 
