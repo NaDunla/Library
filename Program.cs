@@ -10,7 +10,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            
+            var Harry1 = LibraryOps.createBook("Harry Potter and The Sorcerer's Stone", "J.K Rowling");
+            var Harry2 = LibraryOps.createBook("Harry Potter and The Chamber of Secrets", "J.K Rowling");
+            var Harry3 = LibraryOps.createBook("Harry Potter and The Prisoner of Azkaban", "J.K Rowling");
+            var Harry4 = LibraryOps.createBook("Harry Potter and The Goblet of Fire", "J.K Rowling");
+            var Harry5 = LibraryOps.createBook("Harry Potter and The Order of the Phoenix", "J.K Rowling");
+            var Harry6 = LibraryOps.createBook("Harry Potter and The Half-Blood Prince", "J.K Rowling");
+            var Harry7 = LibraryOps.createBook("Harry Potter and The Deathly Hallows", "J.K Rowling");
+
+            foreach (string s in LibraryOps.booksList)
+            {
+                Console.WriteLine(s);
+            }
+           
             Console.WriteLine("Welcome to the Redmond Library!");
             while (true)
             {
@@ -31,7 +43,18 @@ namespace ConsoleApp1
                         return;
                     case "1":
                         Console.Write("Set up account information here\n");
-                        Console.WriteLine();
+                        Console.Write("Please enter your full name: ");
+                        var fullName = Console.ReadLine();
+                        Console.Write("Please enter your email address: ");
+                        var emailAddress = Console.ReadLine();
+
+                        var cardHolder = LibraryOps.createAccount(fullName, emailAddress);
+
+                        Console.WriteLine("Your account has been created. Here are you details:");
+                        Console.WriteLine($"Account Number: {cardHolder.AccountNumber}, " +
+                            $"Name: {cardHolder.Name}, " +
+                            $"Email: {cardHolder.EmailAddress}, " +
+                            $"Date Opened: {cardHolder.DateCreated}, \n");
                         break;
                     case "2":
                         Console.Write("Show books in stock\n");

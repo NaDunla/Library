@@ -8,14 +8,26 @@ namespace ConsoleApp1
 {
     class Books
     {
+        public string checkedOut = "Checked Out";
+        public string inStock = "In Stock";
+        public string noUser = "N/A";
+
 
         #region Properties
-        public string Author { get; private set; }
-        public string Title { get; private set; }
-        public string Status { get; private set; }
-        public int checkedOutTo { get; private set; }
-        public int daysUntilLate { get; private set; }
+        public string Author { get; set; }
+        public string Title { get; set; }
+        public string Status { get; set; }
+        public string checkedOutTo { get; set; }
+        public int daysUntilLate { get; set; }
+        public DateTime dayCheckedOut { get; set; }
         #endregion
+
+        public Books()
+        {
+            Status = inStock;
+            checkedOutTo = noUser;
+            daysUntilLate = 0;
+        }
 
 
         #region Methods

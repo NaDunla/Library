@@ -6,29 +6,56 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class LibraryOps
+    class static LibraryOps
     {
+        
+        public static readonly List<CardUser> cardHoldersList = new List<CardUser>();
+        public static readonly List<string> booksList = new List<string>();
 
 
-        #region Methods
-        public Array inStock()
+        public static CardUser createAccount(string fullName, string emailAddress)
         {
+            var cardUser = new CardUser
+            {
+                Name = fullName,
+                EmailAddress = emailAddress,
 
+            };
+            cardHoldersList.Add(cardUser);
+            return cardUser;
         }
-        public Array outStock()
+
+        public static Books createBook(string title, string author)
         {
-
+            var book = new Books {
+                Title = title,
+                Author = author,
+            };
+            string bookPresentation = title + " by " + author;
+            booksList.Add(bookPresentation);
+            return book;
         }
-        public Array allBooks()
-        {
 
-        }
-        public Array cardHolders()
-        {
+        //#region Methods
+        //public List<String> inStock()
+        //{
+            
+        //}
+        //public List<String> outStock()
+        //{
 
-        }
-        #endregion
+        //}
+        //public List<String> allBooks()
+        //{
 
+        //}
+        //public List<String> cardHolders()
+        //{
+
+        //}
+       
+        //#endregion
+        
     }
 
 }

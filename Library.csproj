@@ -45,6 +45,7 @@
     <Compile Include="CardUser.cs" />
     <Compile Include="Books.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="LibraryOps.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
