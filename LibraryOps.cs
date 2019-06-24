@@ -6,56 +6,56 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class static LibraryOps
+    static class LibraryOps
     {
         
         public static readonly List<CardUser> cardHoldersList = new List<CardUser>();
-        public static readonly List<string> booksList = new List<string>();
+    public static readonly List<string> booksList = new List<string>();
 
 
-        public static CardUser createAccount(string fullName, string emailAddress)
+    public static CardUser createAccount(string fullName, string emailAddress)
+    {
+        var cardUser = new CardUser
         {
-            var cardUser = new CardUser
-            {
-                Name = fullName,
-                EmailAddress = emailAddress,
+            Name = fullName,
+            EmailAddress = emailAddress,
 
-            };
-            cardHoldersList.Add(cardUser);
-            return cardUser;
-        }
+        };
+        cardHoldersList.Add(cardUser);
+        return cardUser;
+    }
 
-        public static Books createBook(string title, string author)
-        {
-            var book = new Books {
-                Title = title,
-                Author = author,
-            };
-            string bookPresentation = title + " by " + author;
-            booksList.Add(bookPresentation);
-            return book;
-        }
+    public static Books createBook(string title, string author)
+    {
+        var book = new Books {
+            Title = title,
+            Author = author,
+        };
+        string bookPresentation = title + " by " + author;
+        booksList.Add(bookPresentation);
+        return book;
+    }
 
-        //#region Methods
-        //public List<String> inStock()
-        //{
-            
-        //}
-        //public List<String> outStock()
-        //{
+    //#region Methods
+    //public List<String> inStock()
+    //{
 
-        //}
-        //public List<String> allBooks()
-        //{
+    //}
+    //public List<String> outStock()
+    //{
 
-        //}
-        //public List<String> cardHolders()
-        //{
+    //}
+    //public List<String> allBooks()
+    //{
 
-        //}
-       
-        //#endregion
-        
+    //}
+    //public List<String> cardHolders()
+    //{
+
+    //}
+
+    //#endregion
+         
     }
 
 }
